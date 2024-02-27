@@ -26,9 +26,13 @@ public class UrlController {
         this.urlService = urlService;
     }
 
+    @RequestMapping("/")
+    public String welcomeMessage() {
+        return "Hello, this is URL Shortner Service";
+    }
+
     @PostMapping("/generate")
     public ResponseEntity<?> generateTinyUrl(@RequestBody UrlDto urlDto) {
-        System.out.println("Received URL:" + urlDto.getUrl());
         Url urlToConvert = urlService.generateTinyUrl(urlDto);
         if (urlToConvert != null) {
             UrlResponse urlResponse = new UrlResponse();
