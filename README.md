@@ -48,6 +48,9 @@ Response:
 ## Continuous Integration
 Continuous integration is set up using GitHub Actions. Whenever a new pull request is opened, the CI workflow will be triggered to run tests and ensure code quality before merging.
 
+## Docker
+Created a docker image for the service and published the image onto docker hub https://hub.docker.com/repository/docker/vigneshreddy17/url-shortner-service/general
+
 ## Contributing
 Contributions are welcome! Please feel free to open a pull request or submit an issue if you encounter any problems or have suggestions for improvements.
 
