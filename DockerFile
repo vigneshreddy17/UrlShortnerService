@@ -1,0 +1,4 @@
+FROM openjdk:17-jdk-alpine
+ARG JAR_FILE=target/*.jar
+COPY ./target/url-shortner.jar url-shortner.jar
+ENTRYPOINT ["java","-jar","/url-shortner.jar"]
